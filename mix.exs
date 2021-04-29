@@ -17,7 +17,7 @@ defmodule Pento.MixProject do
   def application do
     [
       mod: {Pento.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools, :os_mon]
     ]
   end
 
@@ -42,7 +42,8 @@ defmodule Pento.MixProject do
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
       {:phx_gen_auth, "~> 0.7", only: [:dev], runtime: false},
-      {:contex, "~> 0.3.0"}
+      {:contex, "~> 0.3.0"},
+      {:ecto_psql_extras, "~> 0.2"}
     ]
   end
 

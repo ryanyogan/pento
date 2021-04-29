@@ -35,7 +35,10 @@ defmodule PentoWeb.Router do
 
     scope "/" do
       pipe_through :browser
-      live_dashboard "/dashboard", metrics: PentoWeb.Telemetry
+
+      live_dashboard "/dashboard",
+        metrics: PentoWeb.Telemetry,
+        ecto_repos: [Pento.Repo]
     end
   end
 
